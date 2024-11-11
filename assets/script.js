@@ -45,7 +45,7 @@ const levels = [
     clean: '/assets/images/clean-5.jpg'
   }
 ];
-const requiredHoldTime = 5000;
+const requiredHoldTime = 9000;
 const pixelCheckInterval = 250;
 const renderInterval = 1000 / 60;
 const totalLevels = levels.length;
@@ -142,7 +142,7 @@ function render(timestamp) {
     topCtx.save();
     topCtx.globalCompositeOperation = 'destination-out';
 
-    const radius = 20; // silginin boyutu
+    const radius = 60; // silginin boyutu
     pendingPoints.forEach(point => {
       topCtx.beginPath();
       topCtx.arc(point.x, point.y, radius, 0, Math.PI * 2);
